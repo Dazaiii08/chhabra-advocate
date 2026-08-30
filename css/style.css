@@ -7,6 +7,11 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+html, body {
+    overflow-x: hidden;
+}
+
+    
 
 h1,
 h2, 
@@ -89,9 +94,23 @@ a:focus {
 .top-bar .logo h1 {
     margin: 0;
     color: #aa9166;
-    font-size: 75px;
-    line-height: 55px;
+    font-size: 32px;
+    line-height: 1.2;
     font-weight: 800;
+    white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+    .top-bar .logo h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 991px) {
+    .top-bar .logo h1 {
+        font-size: 30px;
+        white-space: normal;
+    }
 }
 
 .top-bar .logo img {
@@ -1635,6 +1654,39 @@ a:focus {
 .newsletter .btn:hover {
     color: #121518;
     background: #aa9166;
+}
+
+/* Reusable boxed CTA button for standalone buttons that sit outside the
+   template's original card components (e.g. "View All Areas of Practice",
+   "View Full Advocate Profiles", the multi-button Get In Touch group).
+   Named differently from .btn so it does not inherit section-scoped
+   rules like .newsletter .btn's absolute positioning. */
+.cta-btn {
+    display: inline-block;
+    position: static;
+    margin: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    background: #121518;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+.cta-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
