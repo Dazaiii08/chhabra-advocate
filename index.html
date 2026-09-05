@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
 
@@ -53,7 +54,7 @@
                 </ul>
             </li>
             <li><a href="#">Our Practice Areas</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </header>
@@ -153,6 +154,56 @@
         </div>
     </section>
 
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-heading">
+        <div class="classic-title-wrap">
+            <div class="classic-lines"></div>
+            <h2 class="classic-heading" id="gallery-heading">Legal Practice &amp; Chambers</h2>
+            <div class="classic-lines"></div>
+        </div>
+        <p class="gallery-intro">A considered look at the office, preparation, consultation, and courtroom work that support professional legal representation.</p>
+        <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-gallery-image="img/advocate%20office.png" data-gallery-title="Professional Chambers" data-gallery-description="Our chambers, with legal reference books, working space, and a professional environment for consultation and case preparation." aria-label="View Professional Chambers">
+                <img class="gallery-image" src="img/advocate%20office.png" alt="Chhabra Legal Advisers office chambers with law books and a professional desk">
+                <span class="gallery-caption">Professional Chambers</span>
+                <span class="gallery-description">Our chambers, with legal reference books, working space, and a professional environment for consultation and case preparation.</span>
+            </button>
+            <button class="gallery-item" type="button" data-gallery-image="img/blog-1.jpg" data-gallery-title="Case Preparation &amp; Legal Research" data-gallery-description="Detailed review of documents and careful preparation form an important part of effective representation." aria-label="View Case Preparation and Legal Research">
+                <img class="gallery-image" src="img/blog-1.jpg" alt="Legal professional preparing documents beside a laptop">
+                <span class="gallery-caption">Case Preparation &amp; Legal Research</span>
+                <span class="gallery-description">Detailed review of documents and careful preparation form an important part of effective representation.</span>
+            </button>
+            <button class="gallery-item" type="button" data-gallery-image="img/court2.jpg" data-gallery-title="Courtroom Advocacy" data-gallery-description="Representative courtroom imagery illustrating professional advocacy before the courts; it does not depict an actual appearance by the advocates." aria-label="View Courtroom Advocacy">
+                <img class="gallery-image" src="img/court2.jpg" alt="Representative courtroom interior for legal advocacy">
+                <span class="gallery-caption">Courtroom Advocacy</span>
+                <span class="gallery-description">Representative courtroom imagery illustrating professional advocacy before the courts; it does not depict an actual appearance by the advocates.</span>
+            </button>
+            <button class="gallery-item" type="button" data-gallery-image="img/carousel-3.jpg" data-gallery-title="Judicial Balance &amp; Legal Evidence" data-gallery-description="A representative legal scene featuring a judge's robe, gavel, scales of justice, law books, documents, and currency." aria-label="View Judicial Balance and Legal Evidence">
+                <img class="gallery-image" src="img/carousel-3.jpg" alt="Judge's robe, gavel, scales of justice, law books, documents, and currency">
+                <span class="gallery-caption">Judicial Balance &amp; Legal Evidence</span>
+                <span class="gallery-description">A representative legal scene featuring a judge's robe, gavel, scales of justice, law books, documents, and currency.</span>
+            </button>
+            <button class="gallery-item" type="button" data-gallery-image="img/single.jpg" data-gallery-title="Counsel &amp; Collaboration" data-gallery-description="Thoughtful discussion and collaboration help develop a clear, practical approach to each legal matter." aria-label="View Counsel and Collaboration">
+                <img class="gallery-image" src="img/single.jpg" alt="Representative legal team discussing documents in a professional office">
+                <span class="gallery-caption">Counsel &amp; Collaboration</span>
+                <span class="gallery-description">Thoughtful discussion and collaboration help develop a clear, practical approach to each legal matter.</span>
+            </button>
+            <button class="gallery-item" type="button" data-gallery-image="img/portfolio-3.jpg" data-gallery-title="Written Submissions" data-gallery-description="Precise drafting, legal research, and close attention to documents support responsible representation." aria-label="View Written Submissions">
+                <img class="gallery-image" src="img/portfolio-3.jpg" alt="Representative legal professional writing beside a wooden gavel">
+                <span class="gallery-caption">Written Submissions</span>
+                <span class="gallery-description">Precise drafting, legal research, and close attention to documents support responsible representation.</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+        <div class="lightbox-panel">
+            <button class="lightbox-close" type="button" aria-label="Close gallery image">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-title" id="lightboxTitle"></p>
+            <p class="lightbox-description" id="lightboxDescription"></p>
+        </div>
+    </div>
+
     <div class="contact-boxes-row">
         <div class="contact-box">
             <div class="contact-box-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -198,6 +249,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Our Practice Areas</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -218,5 +270,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
