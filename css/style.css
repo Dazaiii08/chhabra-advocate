@@ -258,7 +258,7 @@ textarea {
 
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 18px);
+    top: 100%;
     left: -18px;
     z-index: 999;
     display: none;
@@ -272,6 +272,10 @@ textarea {
 }
 
 .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown.open .dropdown-menu {
     display: block;
 }
 
@@ -1380,6 +1384,10 @@ textarea {
         display: none;
     }
 
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
     .hero-banner {
         height: 410px;
         min-height: 350px;
@@ -1480,7 +1488,6 @@ textarea {
         flex-direction: column;
         gap: 8px;
     }
-
     .newsletter .btn {
         width: 100%;
         height: 48px;
@@ -1597,4 +1604,135 @@ textarea {
     height: 2px;
     margin: 12px auto 0;
     background: var(--primary-gold);
+}
+
+/* Service pages */
+.service-page {
+    background: var(--bg-light);
+}
+
+.service-hero {
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 72px 20px 78px;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-gold);
+}
+
+.service-hero .eyebrow {
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.service-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 16px;
+    font-family: var(--font-serif);
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.service-hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #d5dfdf;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.service-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 58px 20px 70px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    gap: 45px;
+}
+
+.service-main h2,
+.service-aside h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-dark);
+}
+
+.service-main h2 {
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.service-main p,
+.service-main li {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.service-main p + p {
+    margin-top: 14px;
+}
+
+.service-list {
+    list-style: none;
+    margin-top: 24px;
+    display: grid;
+    gap: 12px;
+}
+
+.service-list li {
+    background: #fff;
+    border-left: 3px solid var(--primary-gold);
+    padding: 13px 16px;
+}
+
+.service-list i {
+    color: var(--primary-gold);
+    margin-right: 10px;
+}
+
+.service-aside {
+    align-self: start;
+    background: var(--teal-card);
+    border: 1px solid var(--primary-gold);
+    padding: 28px 24px;
+    color: #fff;
+}
+
+.service-aside h3 {
+    color: var(--gold-light);
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.service-aside p {
+    color: #d5dfdf;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-aside .btn-appointment {
+    width: 100%;
+    justify-content: center;
+}
+
+.service-page .main-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .service-content {
+        grid-template-columns: 1fr;
+        padding-top: 42px;
+    }
+
+    .service-hero {
+        padding: 54px 20px 60px;
+    }
 }

@@ -28,6 +28,34 @@ function startSlider() {
 document.addEventListener('DOMContentLoaded', () => {
     startSlider();
 
+    document.querySelectorAll('.dropdown > a').forEach((toggle) => {
+        toggle.setAttribute('aria-expanded', 'false');
+
+        toggle.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const dropdown = toggle.parentElement;
+            const isOpen = dropdown.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+
+            document.querySelectorAll('.dropdown.open').forEach((openDropdown) => {
+                if (openDropdown !== dropdown) {
+                    openDropdown.classList.remove('open');
+                    openDropdown.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown.open').forEach((dropdown) => {
+                dropdown.classList.remove('open');
+                dropdown.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+
     const form = document.getElementById('enquiryForm');
     if (form) {
         form.addEventListener('submit', (e) => {
